@@ -2,10 +2,6 @@ package ru.netology.statistic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-//import org.testng.AssertJUnit;
-//import org.testng.annotations.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class StatisticsServiceTest {
 

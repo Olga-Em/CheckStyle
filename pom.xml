@@ -23,6 +23,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <build>
         <plugins>
             <plugin>
@@ -31,33 +44,6 @@
                 <version>2.22.2</version>
                 <configuration>
                     <failIfNoTests>true</failIfNoTests>
-                </configuration>
-            </plugin>
-
-            <!--            <plugin>-->
-            <!--                <groupId>com.github.spotbugs</groupId>-->
-            <!--                <artifactId>spotbugs-maven-plugin</artifactId>-->
-            <!--                <version>4.7.2.1</version>-->
-            <!--                <dependencies>-->
-            <!--                   //&lt;!&ndash; overwrite dependency on spotbugs if you want to specify the version of spotbugs &ndash;&gt;-->
-            <!--                    <dependency>-->
-            <!--                        <groupId>com.github.spotbugs</groupId>-->
-            <!--                        <artifactId>spotbugs</artifactId>-->
-            <!--                        <version>4.7.3</version>-->
-            <!--                    </dependency>-->
-            <!--                </dependencies>-->
-            <!--            </plugin>-->
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                    <encoding>UTF-8</encoding>
-                    <consoleOutput>true</consoleOutput>
-                    <failsOnError>true</failsOnError>
-                    <linkXRef>false</linkXRef>
                 </configuration>
             </plugin>
 
@@ -106,22 +92,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.2.0</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>checkstyle</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-        </plugins>
-    </reporting>
-
 </project>
